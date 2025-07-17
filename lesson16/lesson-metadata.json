@@ -1,0 +1,36 @@
+{
+  "id": "68796c79a4ac7ef2a17a61ac",
+  "lessonNumber": 16,
+  "title": "Lesson Name",
+  "status": "pending",
+  "assignment": {
+    "title": "Assignment for Lesson 16",
+    "objective": "No objective specified",
+    "expectedCapabilities": [],
+    "instructions": [],
+    "tasks": [
+      {
+        "taskNumber": 1,
+        "title": "Task 1",
+        "description": "\n# **Lesson 11: Introduction to Data Visualization**\n\nThis assignment is to be implemented in a Kaggle notebook, using a Kaggle dataset.  As usual, mark the section of code that implements each task with a markdown cell.\n\n---\n\n## **Task 1: Data Understanding**\n\n1. In Kaggle, go to the Datasets link on the left side of the page.\n2. Search for \"Diabetes Health Indicators Dataset\".  You should find one from Alex Teboul.\n3. In Data Explorer on the right, click on the one that starts with \"diabetes_012\".\n4. We need to understand particular columns.  Click on the pulldown for the 22 columns. Click on \"Select All\" and then \"Apply\".  Then select \"Column\" from the menu.  This explains the meaning of all the columns.  Scroll down throuh the information about each column.  You see that \"Diabetes_012\" can have 3 numeric values.  You see that \"Age\" is broken down into 13 buckets.  You see that \"GenHlth\" has values from 1 to 5, 5 being worst!  You see that PhysHlth is the number of days in the past month where the person's physical health was not good.  Again, a high number is bad!  We can't understand the plots we make **unless we know what the data means.**\n\n## **Task 2: Creating the Notebook and Loading Data**\n\n1. Create a Kaggle Notebook called \"CTD_Assignment_11\".  Add the \"Diabetes Health Indicators Dataset\".  Run the first cell so that you get the filenames.\n2. Load the one that has \"diabetes_012\" in the name into a `diabetes` DataFrame.\n3. Print out the first 5 lines of the DataFrame.\n\n## **Task 3: A Bar Plot For Age Distributions**\n\n1. Use Matplotlib to create a histogram of age distributions in the `diabetes` DataFrame, where the X axis is \"Age\" and the Y axis is \"Count\". Give the plot a meaningful title, and give the axes meaningful labels.\n2. Show the plot to see if it is as you expect.\n\n## **Task 4: General Health over Time**\n\n1. Create a `health_by_age` DataFrame, using groupby() on the `diabetes` DataFrame.  Group by age.  Aggregate the `GenHlth` column using `mean`.\n2. Add a column called \"Health\" to the resulting DataFrame.  The value of this should be 5 minus the `GenHlth` column.  It is usually more meaningful to have high values mean good and low values mean bad.\n3. Sort `health_by_age` by the index.  (You use the sort_index() method.)  The index for this DataFrame is \"Age\", because of the groupby().\n4. Use Matplotlib to create a line plot where the X axis is \"Age\" (the index) and the Y axis is \"Health\".  Add a meaningful title and axes labels.\n5. Show the plot. It's kind of a sad story.\n\n## **Task 5: A Heat Map of All Columns**\n\n1. Create a correlation matrix called `diabetes_corr` for all columns.\n2. Use Seaborn to create a heat map from the correlation matrix.  Note: It appears that Seaborn uses some Python deprecated features, so you will see warning messages.  You can ignore these.\n3. Show the heat map.\n\nAs you will notice, this heat map is hard to read.  You solve that problem in the next task by subsetting the correlation matrix.\n\n## **Task 6: Subset Heat Maps**\n\nSuppose you decide that the data you care about most is in the \"Diabetes_012\", \"HeartDiseaseorAttack\", and \"GenHlth\" columns.\n\n1. Create a subset correlation matrix called `diabetes_corr_subset`, selecting these columns from `diabetes_corr`.\n2. Sort this in descending order on the `Diabetes_012` column.\n3. Create a heatmap for the first 10 rows and show it.  These are the factors most strongly correlated with diabetes.\n4. Create a heatmap for the last 10 rows, with an appropriate title, and show it.  These are the factors that are negatively correlated (or weakly correlated) with diabetes.\n5. Sort the matrix again on the \"GenHlth\" column in descending order, and again show heat maps for the first and last 10 rows.\n6. Notice the factors that are most consequential for diabetes and health, according to this dataset.  Add a markdown cell that describes these.\n\n## **Task 7: A Pair Plot: Body Mass Index vs. Age\n\n1. Using the `diabetes` DataFrame, create a pair plot for \"BMI\" and \"Age\", with a `hue` of \"Diabetes_012\".  I find that `palette=['#FF5733', '#33FF57', '#3357FF']` gives a helpful display.\n2. Give the pair plot a descriptive title and show it.\n3. The plot is hard to read.  There are too many values for BMI.  Use `qcut()` to divide BMI into 10 quantiles, and add the resulting Series to the `d_h_i` DataFrame.  Then plot Age vs. BMI Quantiles, with the same hue as before.\n4. Give this pair plot a descriptive title and show it.\n\n### **Submit the Notebook for Your Assignment**  \n\n📌 **Follow these steps to submit your work:**  \n\n#### **1️⃣ Get a Sharing Link for Your Assignment**  \n- On the upper right of the Kaggle page, click on Save Version and save, accepting all defaults.  You can just do a quick save.\n- On the upper right, click on Share.  Choose Public, make sure that Allow Comments is on, and copy the public URL to your clipboard.\n\n#### **2️⃣ Submit Your Kaggle Link**  \n- Paste the URL into the **assignment submission form**.  \n\n---\n",
+        "codeExample": "",
+        "_id": "68796c79a4ac7ef2a17a61ae"
+      }
+    ],
+    "submissionInstructions": "Please submit on time",
+    "checklist": [],
+    "checkForUnderstanding": []
+  },
+  "subsections": [
+    {
+      "subsectionOrder": 1,
+      "title": "Lesson 16",
+      "content": "# Lesson Name\n\n## Lesson Overview\n\n**Learning objective:**\n\nTopics: \n  * TBD\n  * TBD\n  * TBD\n\n## Subsection\n\n### Subsection Video\n\n### Subsection Check for Understanding\n\n---\nThis content was written by Janet Zulu, Reid Russom, and CTD volunteers—with special thanks to the brain trust of John McGarvey, Rebecca Callari-Kaczmarczyk, Tom Arns, and Josh Sternfeld. To submit feedback, please fill out the **[CTD Curriculum Feedback Form](https://forms.gle/RZq5mav7wotFxyie6)**.\n",
+      "videoUrl": "",
+      "codeExamples": [],
+      "externalLinks": [],
+      "quizzes": [],
+      "_id": "68796c79a4ac7ef2a17a61ad"
+    }
+  ]
+}
