@@ -51,5 +51,5 @@ Course contributors will be listed here.
 
 ---
 
-*Created by: Tammam Alwafai*
-*Last updated: 7/17/2025*
+*Created by: [Tammam Alwafai](https://github.com/1992tw)*
+*Last updated: 7/28/2025*
